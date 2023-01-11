@@ -1,5 +1,4 @@
 import React from "react";
-import LogoImg from "../../templates/Logo/LogoImg";
 
 import styles from "./index.module.scss";
 
