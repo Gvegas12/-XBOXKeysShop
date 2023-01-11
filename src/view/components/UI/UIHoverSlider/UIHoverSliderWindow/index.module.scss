@@ -1,0 +1,40 @@
+@import "../../../../assets/styles/scss/variables";
+@import "../variables";
+
+.hoverSlider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+  
+
+  &__window {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__navBtn {
+    width: 40px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+  }
+  &__navBtnLeft {
+    border-radius: $borderRadius 0 0 $borderRadius;
+    background-image: linear-gradient(
+      270deg,
+      rgb(152, 220, 129, 0.351),
+      transparent
+    );
+  }
+  &__navBtnRight {
+    border-radius: 0 $borderRadius $borderRadius 0;
+    background-image: linear-gradient(
+      90deg,
+      rgba(152, 220, 129, 0.351),
+      transparent
+    );
+  }
+}

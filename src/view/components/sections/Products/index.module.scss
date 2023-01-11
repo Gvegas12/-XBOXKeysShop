@@ -1,0 +1,15 @@
+@import "../../../assets/styles/scss/variables";
+
+.products {
+  padding: $sectionSeparatePadding 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__item {
+    width: 45%;
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../assets/styles/scss/variables";
+
+$opacityVal: 0.7;
+
+.navBar {
+  width: $header--width;
+  margin: 20px auto;
+  padding: 10px 0;
+  &List {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    background-color: rgba(255, 255, 255, $opacityVal);
+    border-radius: 5px;
+    padding: 10px 30px;
+  }
+  &Item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    &:hover {
+      .navBarLink {
+        opacity: 1;
+      }
+    }
+  }
+  &Link {
+    cursor: pointer;
+    opacity: $opacityVal;
+    color: black;
+    transition: opacity 0.3s;
+  }
+  &LinkActive {
+    border-bottom: 2px solid var(--main--bg-color);
+    opacity: 1;
+  }
+}

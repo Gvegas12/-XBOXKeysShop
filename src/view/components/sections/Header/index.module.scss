@@ -1,0 +1,37 @@
+@import "../../../assets/styles/scss/variables";
+
+$header--padding: 50px;
+
+.header {
+  width: 100%;
+  height: $header--height;
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &Wrapper {
+    width: $header--width;
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+
+    .nav {
+      height: inherit;
+      &List {
+        display: flex;
+        align-items: center;
+        height: inherit;
+      }
+      &Item {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+      &Link {
+        color: black;
+      }
+    }
+  }
+}

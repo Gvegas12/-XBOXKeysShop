@@ -1,0 +1,80 @@
+@import "../variables";
+
+.hoverSliderItem {
+  $MainBorderRadius: 15px;
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: $MainBorderRadius + 5px;
+
+  &__activeImageContainer {
+    height: inherit;
+    width: 60%;
+    padding: 5px;
+    border-radius: $MainBorderRadius;
+  }
+  &__activeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(0, 128, 4, 0.255);
+    border-radius: $MainBorderRadius;
+  }
+
+  &__descriptionContainer {
+    position: relative;
+    border-radius: 0 $borderRadius $borderRadius 0;
+    flex-grow: 1;
+    padding: $localPadding 5px;
+
+    & > *:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+  &__name,
+  &__status,
+  &__price {
+    text-align: start;
+    padding-left: $localPadding;
+    color: white;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  &__status {
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  &__price {
+    position: absolute;
+    bottom: $localPadding;
+    left: 0;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  &__hoverImage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px;
+
+    &Item {
+      cursor: pointer;
+      opacity: 0.8;
+      height: 90px;
+      width: 100%;
+      object-fit: cover;
+      background-color: rgba(0, 128, 4, 0.255);
+      border-radius: $borderRadius;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
